@@ -1,0 +1,5 @@
+# Untouched WordPress files downloaded from wordpress.org
+wordpress-core
+
+# MySQL data directory. Dump the db to backup.
+mysql-data

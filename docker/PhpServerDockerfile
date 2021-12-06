@@ -1,0 +1,21 @@
+FROM php:8.0-apache
+
+RUN apt-get update && \
+    apt-get -y install git
+
+RUN cd /tmp && \
+    git clone git://github.com/xdebug/xdebug.git && \
+    cd xdebug
+
+RUN cd /tmp/xdebug && git checkout xdebug_3_0
+
+RUN cd /tmp/xdebug && phpize && \
+    ./configure --enable-xdebug && \
+    make && \
+    make install && \
+    rm -rf /tmp/xdebug
+
+RUN docker-php-ext-install mysqli
+
+COPY ../config/php.ini /usr/local/etc/php/php.ini
+COPY ../config/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini

@@ -10,6 +10,8 @@
  * @subpackage Head_Inject/public
  */
 
+use HeadInject\Utilities\Calculator as UtilitiesCalculator;
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -112,6 +114,8 @@ class Head_Inject_Public {
 		 * @var textarea Saved text from admin area
 		 */
 		$setting = get_option('head_inject_setting');
+		$calculator = new UtilitiesCalculator();
+		$setting = $calculator->sum($setting);
 		echo isset( $setting ) ? $setting : '';
 	}
 }

@@ -25,6 +25,16 @@ Don't use the default configuration in production environment. Change the passwo
 
 # Project Organization
 
+| Folder | Description |
+| --- | ----------- |
+| .vscode | VSCode files |
+| config | Configuration files (php.ini, xdebug.ini, wp-config.php, etc.) |
+| docker | Dockerfiles and docker-compose files |
+| images | Images |
+| mysql-data | MySQL data directory |
+| wordpress-core | Core WordPress files - Downloaded from wordpress.org |
+| wp-head-inject-plugin | WordPress plugin |
+
 
 # WP Head Inject
 

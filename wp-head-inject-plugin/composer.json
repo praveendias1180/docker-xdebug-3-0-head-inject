@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "psr-4": {"HeadInject\\": "includes/"}
+    },
+    "require": {
+        "php": "^7.4"
+    }
+}

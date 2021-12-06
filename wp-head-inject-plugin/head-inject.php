@@ -16,7 +16,7 @@
  * Plugin Name:       WordPress Head Inject
  * Plugin URI:        https://praveendias1180.github.io/
  * Description:       Inject custom code snippets in every page. Just paste the code and it'll be there in the head of every page.
- * Version:           1.0.0
+ * Version:           2.0.0
  * Author:            Praveen Dias
  * Author URI:        https://praveendias1180.github.io/
  * License:           GPL-2.0+
@@ -63,6 +63,7 @@ register_deactivation_hook( __FILE__, 'deactivate_head_inject' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-head-inject.php';
+require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
 /**
  * Begins execution of the plugin.

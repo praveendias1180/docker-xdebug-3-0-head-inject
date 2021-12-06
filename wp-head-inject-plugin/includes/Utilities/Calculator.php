@@ -15,10 +15,10 @@ class Calculator
      */
     function sum($input = '10 20 30'): int
     {
-        $numbers = preg_split('/\s+/', $input);
+        $numbers = preg_split('/\s+/', trim($input));
         $total = 0;
         foreach ($numbers as $number) {
-            $total += $number;
+            $total += intval($number); 
         }
         return $total;
     }
